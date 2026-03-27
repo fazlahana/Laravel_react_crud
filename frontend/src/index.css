@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 leading-relaxed;
+}
+
+/* Custom transitions and glass effects */
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.table-hover-row {
+  @apply transition-colors duration-200 hover:bg-blue-50/30;
+}
+
+/* Animations using Framer Motion style classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
